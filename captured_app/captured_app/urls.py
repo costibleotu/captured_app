@@ -22,4 +22,5 @@ import api
 urlpatterns = [
     url(r'^api/', include('api.urls', namespace='api') ),
     url(r'^admin/', admin.site.urls),
+    url(r'', include('frontend.urls', namespace='frontend') ),
 ]

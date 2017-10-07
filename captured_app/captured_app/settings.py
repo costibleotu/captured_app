@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'api',
     'frontend',
+
     'material.theme.purple',
     'material',
     'material.admin',
@@ -42,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'compressor',
+    'django_libsass',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +79,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'captured_app.wsgi.application'
 
+# Static finders
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -81,11 +97,11 @@ WSGI_APPLICATION = 'captured_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.environ.get('DATABASE_HOST', '192.168.43.232'),
+        'HOST': os.environ.get('DATABASE_HOST', '127.0.0.1'),
         'PORT': int(os.environ.get('DATABASE_PORT', 5432)),
-        'NAME': os.environ.get('DATABASE_NAME', 'civicdev'),
-        'USER': os.environ.get('DATABASE_USER', 'civicdev'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'civicdev')
+        # 'NAME': os.environ.get('DATABASE_NAME', 'civicdev'),
+        # 'USER': os.environ.get('DATABASE_USER', 'civicdev'),
+        # 'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'civicdev')
     }
 }
 
@@ -123,7 +139,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Precompilers
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_DIR, 'static'),
+]
+
+STATIC_ROOT = '/var/www/captured_app/static/'
 STATIC_URL = '/static/'

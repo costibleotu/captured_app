@@ -1,0 +1,21 @@
+{% load static compress %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Captured - Corruption detection</title>
+
+  {% compress css %}
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'vendor/app/app.scss' %}" />
+  {% endcompress %}
+
+  <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'vendor/app/app.js' %}"></script>
+</head>
+<body>
+
+</body>
+</html>
