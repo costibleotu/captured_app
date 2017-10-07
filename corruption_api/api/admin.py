@@ -20,7 +20,7 @@ class WinnerAdmin(admin.ModelAdmin):
 
 @admin.register(models.Contract)
 class ContractAdmin(admin.ModelAdmin):
-    list_display = ('issuer', 'winner','category','rowid','ca_bids','ca_cpv','ca_nuts','ca_scntr_sc','ca_title','country','ca_date','ca_year','ca_contract_value','ca_procedure','ca_criterion')
+    list_display = ('issuer', 'winner','category','rowid','ca_bids','ca_cpv','ca_nuts','ca_scntr_sc','ca_title','country','ca_date','ca_contract_value','ca_procedure','ca_criterion')
     icon = '<i class="material-icons">settings_input_composite</i>'
     search_fields = ['country']
 
