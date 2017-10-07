@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'api',
+    'frontend',
     'material.theme.purple',
     'material',
     'material.admin',
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'corruption_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.environ.get('DATABASE_HOST', '127.0.0.1'),
+        'HOST': os.environ.get('DATABASE_HOST', '192.168.43.232'),
         'PORT': int(os.environ.get('DATABASE_PORT', 5432)),
         'NAME': os.environ.get('DATABASE_NAME', 'civicdev'),
         'USER': os.environ.get('DATABASE_USER', 'civicdev'),
