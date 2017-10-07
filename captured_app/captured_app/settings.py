@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'captured_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.environ.get('DATABASE_HOST', '192.168.43.232'),
+        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
         'PORT': int(os.environ.get('DATABASE_PORT', 5432)),
-        'NAME': os.environ.get('DATABASE_NAME', 'civicdev'),
+        'NAME': os.environ.get('DATABASE_NAME', 'captured_app'),
         'USER': os.environ.get('DATABASE_USER', 'civicdev'),
         'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'civicdev')
     }

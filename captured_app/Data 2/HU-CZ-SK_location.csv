@@ -1,0 +1,43 @@
+NUTS 1,Code 1,NUTS 2,Code 2,NUTS 3,Code 3
+Czech Republic,CZ0,Prague,CZ01,Prague,CZ010
+Czech Republic,CZ0,St?ední ?echy (Central Bohemia),CZ02,Central Bohemian Region,CZ020
+Czech Republic,CZ0,Jihozápad (Southwest),CZ03,South Bohemian Region,CZ031
+Czech Republic,CZ0,Jihozápad (Southwest),CZ03,Plze? Region,CZ032
+Czech Republic,CZ0,Severozápad (Northwest),CZ04,Karlovy Vary Region,CZ041
+Czech Republic,CZ0,Severozápad (Northwest),CZ04,Ústí nad Labem Region,CZ042
+Czech Republic,CZ0,Severovýchod (Northeast),CZ05,Liberec Region,CZ051
+Czech Republic,CZ0,Severovýchod (Northeast),CZ05,Hradec Králové Region,CZ052
+Czech Republic,CZ0,Severovýchod (Northeast),CZ05,Pardubice Region,CZ053
+Czech Republic,CZ0,Jihovýchod (Southeast),CZ06,Vyso?ina Region,CZ063
+Czech Republic,CZ0,Jihovýchod (Southeast),CZ06,South Moravian Region,CZ064
+Czech Republic,CZ0,St?ední Morava (Central Moravia),CZ07,Olomouc Region,CZ071
+Czech Republic,CZ0,St?ední Morava (Central Moravia),CZ07,Zlín Region,CZ072
+Czech Republic,CZ0,Moravskoslezsko,CZ08,Moravian-Silesian Region,CZ080
+Central Hungary,HU1,Central Hungary,HU10,Budapest,HU101
+Central Hungary,HU1,Central Hungary,HU10,Pest,HU102
+Transdanubia,HU2,Central Transdanubia,HU21,Fejér,HU211
+Transdanubia,HU2,Central Transdanubia,HU21,Komárom-Esztergom,HU212
+Transdanubia,HU2,Central Transdanubia,HU21,Veszprém,HU213
+Transdanubia,HU2,Western Transdanubia,HU22,Gy?r-Moson-Sopron,HU221
+Transdanubia,HU2,Western Transdanubia,HU22,Vas,HU222
+Transdanubia,HU2,Western Transdanubia,HU22,Zala,HU223
+Transdanubia,HU2,Southern Transdanubia,HU23,Baranya,HU231
+Transdanubia,HU2,Southern Transdanubia,HU23,Somogy,HU232
+Transdanubia,HU2,Southern Transdanubia,HU23,Tolna,HU233
+Great Plain and North,HU3,Northern Hungary,HU31,Borsod-Abaúj-Zemplén,HU311
+Great Plain and North,HU3,Northern Hungary,HU31,Heves,HU312
+Great Plain and North,HU3,Northern Hungary,HU31,Nógrád,HU313
+Great Plain and North,HU3,Northern Great Plain,HU32,Hajdú-Bihar,HU321
+Great Plain and North,HU3,Northern Great Plain,HU32,Jász-Nagykun-Szolnok,HU322
+Great Plain and North,HU3,Northern Great Plain,HU32,Szabolcs-Szatmár-Bereg,HU323
+Great Plain and North,HU3,Southern Great Plain,HU33,Bács-Kiskun,HU331
+Great Plain and North,HU3,Southern Great Plain,HU33,Békés,HU332
+Great Plain and North,HU3,Southern Great Plain,HU33,Csongrád,HU333
+Slovakia,SK0,Bratislava Region,SK01,Bratislava,SK010
+Slovakia,SK0,Western Slovakia,SK02,Trnava,SK021
+Slovakia,SK0,Western Slovakia,SK02,Tren?ín,SK022
+Slovakia,SK0,Western Slovakia,SK02,Nitra ,SK023
+Slovakia,SK0,Central Slovakia,SK03,Žilina,SK031
+Slovakia,SK0,Central Slovakia,SK03,Banská Bystrica,SK032
+Slovakia,SK0,Eastern Slovakia,SK04 ,Prešov,SK041
+Slovakia,SK0,Eastern Slovakia,SK04 ,Košice,SK042
