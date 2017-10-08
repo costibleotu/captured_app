@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField, HStoreField, JSONField
+import json 
+
 
 class CategoryCode(models.Model):
     code = models.CharField(max_length=20)
@@ -13,8 +15,9 @@ class Influence(models.Model):
     market = models.ForeignKey('api.Market')
     obj_id = models.CharField(max_length=20)
     contracts_no = models.IntegerField()
-    bridging_capacity = models.IntegerField()
+    bridging_capacity = models.IntegerField(null=True)
     influence = models.FloatField()
+    infl_norm = models.FloatField()
     year = models.DateField()
 
 
@@ -51,7 +54,7 @@ class Issuer(models.Model):
     influence = JSONField(null=True)
 
     def __str__(self):
-        return self.anb_id
+        return json.dumps(self.influence)
 
 
 class Winner(models.Model):

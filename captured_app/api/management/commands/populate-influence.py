@@ -32,7 +32,8 @@ class Command(BaseCommand):
                 issuer.influence[i.year.strftime('%Y')][i.market.name]={
                     "contracts_no": i.contracts_no,
                     "bridging_capacity": i.bridging_capacity,
-                    "influence": i.influence
+                    "influence": i.influence,
+                    "infl_norm": i.infl_norm
                 }
                 print(issuer.influence)
                 issuer.save()
@@ -45,9 +46,12 @@ class Command(BaseCommand):
                     winner.influence[i.year.strftime('%Y')][i.market.name]={
                         "contracts_no": i.contracts_no,
                         "bridging_capacity": i.bridging_capacity,
-                        "influence": i.influence
+                        "influence": i.influence,
+                        "infl_norm": i.infl_norm
                     }
                     winner.save()
                     print(winner.influence)
                 except Exception as e:
-                    pass
+                    # print(e)
+                    print(i.obj_id)
+                    i.delete()

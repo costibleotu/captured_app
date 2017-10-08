@@ -43,6 +43,7 @@ class Command(BaseCommand):
             "SK": "Slovakia",
             "CZ": "Czech Republic"
         }
+
         for file in glob(s_dir + '/*'):
             print(file)
             with open(file, encoding="ISO-8859-1") as csvfile:
@@ -61,11 +62,14 @@ class Command(BaseCommand):
                     try:
                         year = datetime.strptime(year_str,'%Y')
                         influence = models.Influence.objects.get(obj_id=row['id'], year=year)
+                        influence.infl_norm=row['infl_norm']
+                        influence.save()
                     except Exception as e:
                         influence = models.Influence.objects.create(
                             obj_id=row['id'],
                             year=year,
                             contracts_no=row['Contracts'],
-                            bridging_capacity=row['Bridging Capacity'],
+                            bridging_capacity=row.get('Bridging Capacity',0),
                             influence=row['Influence'],
+                            infl_norm=row['infl_norm'],
                             market=market)
